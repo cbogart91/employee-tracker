@@ -10,7 +10,7 @@ VALUES  ('Manager', 150000, 1),
         ('Sales', 80000, 3);
 
 INSERT INTO employees (first_name, last_name, role_id, manager_id)
-VALUES  ('Derek', 'Schultz', '1'),
-        ('Bob', 'Dylan'),
-        ('Alex', 'Smith'),
-        ('John', 'Bush');
+VALUES  ('Derek', 'Schultz', 1),
+        ('Bob', 'Dylan', 2),
+        ('Alex', 'Smith', 1),
+        ('John', 'Bush', 1);
