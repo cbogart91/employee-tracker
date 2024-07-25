@@ -2,5 +2,24 @@
   "dependencies": {
     "express": "^4.19.2",
     "inquirer": "^8.2.4"
-  }
+  },
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "system that tracks a companys employees",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbogart91/employee-tracker.git"
+  },
+  "author": "Cody Bogart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbogart91/employee-tracker/issues"
+  },
+  "homepage": "https://github.com/cbogart91/employee-tracker#readme"
 }
