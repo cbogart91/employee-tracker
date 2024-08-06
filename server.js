@@ -121,7 +121,7 @@ prompt([
           },
         ]).then(({ title, salary, department }) => {
           const findDepartment = departments?.find((dept) => dept.name === department).id;
-          pool.query("INSERT INTO role (title, salary, department) VALUES ($1, $2, $3)", [title, salary, findDepartment])
+          pool.query("INSERT INTO role (title, salary, department_id) VALUES ($1, $2, $3)", [title, salary, findDepartment])
             .then(() => {
               console.log(`Added new role '${title}'`);
               pool.end();
@@ -195,11 +195,11 @@ prompt([
           const employee_id = employees.find((emp) => `${emp.first_name} ${emp.last_name}` === employee).id;
           const role_id = roles.find((r) => r.title === role).id;
           pool.query("UPDATE employee SET role_id = $1 WHERE id = $2", [role_id, employee_id,])
-        })
         .then(() => {
-          console.log(`Updated employee '${employees}' role to '${roles}'`);
+          console.log(`Updated employee '${employee}' role to '${role}'`);
           pool.end();
-        })
+        });
+      })
         .catch((err) => {
           console.error("Error when updating employees role!", err);
           pool.end();
